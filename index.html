@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para a Lurdes ❤</title>
+
+<!--
+  ================================================================
+  GUIA RÁPIDO DE EDIÇÃO
+  ================================================================
+  Tudo o que precisas de mudar está dentro da tag <script> no
+  fundo deste ficheiro, num objeto chamado CONFIG.
+  Procura por "EDITAR AQUI" e vais encontrar tudo:
+  - nomes e datas
+  - cartas, poemas e pensamentos
+  - fotos da galeria (por momentos)
+  - mensagens de cada rosa
+  - linha do tempo
+  - coisas que adoras nela
+  - carta final
+
+  FOTOS: cria uma pasta "fotos" ao lado deste ficheiro e coloca lá
+  as imagens. Depois muda o "src" de cada foto no CONFIG para o
+  nome do ficheiro, ex: "fotos/praia.jpg".
+  Enquanto não adicionares uma foto, aparece um coração no lugar dela.
+
+  MÚSICA (opcional): coloca um mp3 numa pasta "musica" chamada
+  "nossa-musica.mp3". Se não quiseres música, ignora — o botão
+  simplesmente não faz nada de mal.
+  ================================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+<div id="hearts-bg"></div>
+
+<nav id="nav-principal"></nav>
+
+<main>
+  <section id="home" class="page active">
+    <div class="eyebrow">o nosso cantinho</div>
+    <div class="foto-capa" id="foto-capa"></div>
+    <h1 id="titulo-home"></h1>
+    <p class="subtitulo" id="mensagem-home"></p>
+    <div class="contadores" id="contadores"></div>
+    <button class="btn" data-ir-para="mensagens">Entrar ❤</button>
+  </section>
+
+  <section id="mensagens" class="page">
+    <div class="titulo-pagina">
+      <h2>Mensagens</h2>
+      <p>Cartas, poemas e pensamentos. Toca para abrir cada um.</p>
+    </div>
+    <div class="cartas-lista" id="lista-cartas"></div>
+  </section>
+
+  <section id="galeria" class="page">
+    <div class="titulo-pagina">
+      <h2>Galeria</h2>
+      <p>Os nossos momentos, guardados um a um.</p>
+    </div>
+    <div id="lista-galeria"></div>
+  </section>
+
+  <section id="rosas" class="page">
+    <div class="titulo-pagina">
+      <h2>Jardim das Rosas</h2>
+      <p>Uma rosa por cada semana nossa. O jardim cresce sozinho, semana após semana.</p>
+    </div>
+    <div class="rosas-grid" id="lista-rosas"></div>
+  </section>
+
+  <section id="tempo" class="page">
+    <div class="titulo-pagina">
+      <h2>Linha do Tempo</h2>
+      <p>Como tudo começou — e continua.</p>
+    </div>
+    <div class="timeline" id="lista-tempo"></div>
+  </section>
+
+  <section id="coisas" class="page">
+    <div class="titulo-pagina">
+      <h2>Coisas que adoro em ti</h2>
+      <p>Uma lista que nunca vai estar completa.</p>
+    </div>
+    <div class="coisas-grid" id="lista-coisas"></div>
+    <div class="contador-girias">
+      <div class="rotulo" style="font-size:13px;color:var(--rosa-vinho);">Vezes que já disseste "Ai homem..."</div>
+      <div class="valor" id="valor-girias">0</div>
+      <button id="btn-girias">Disse outra vez ❤</button>
+    </div>
+  </section>
+
+  <section id="final" class="page">
+    <div class="titulo-pagina">
+      <h2>Para ti</h2>
+    </div>
+    <div class="carta-final-box">
+      <p id="texto-carta-final"></p>
+      <div class="assinatura" id="assinatura-final"></div>
+    </div>
+  </section>
+</main>
+
+<button class="easter-egg-btn" id="btn-easter">Não carregues.</button>
+<button class="musica-toggle" id="btn-musica" title="Música">♪</button>
+<audio id="audio-fundo" loop></audio>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal-box" id="modal-box"></div>
+</div>
+
+<footer id="rodape"></footer>
+
+<script src="js/index.js"></script>
+
+</body>
+</html>
