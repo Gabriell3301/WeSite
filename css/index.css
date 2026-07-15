@@ -97,7 +97,7 @@
   /* ---------- Home ---------- */
   #home{ text-align:center; padding-top: 40px; }
   .foto-capa{
-    width: min(420px, 85vw); aspect-ratio: 4/5;
+    width: min(380px, 85vw); aspect-ratio: 3/5;
     margin: 10px auto 30px;
     border-radius: 24px;
     overflow:hidden;

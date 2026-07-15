@@ -13,7 +13,7 @@ const CONFIG = {
   },
 
   home: {
-    fotoCapa: "../fotos/capa.jpg", // EDITAR AQUI — coloca a vossa foto favorita
+    fotoCapa: "../photos/capa.png", // EDITAR AQUI — coloca a vossa foto favorita
     titulo: "Para ti, Lurdes",
     mensagem: "Um cantinho só nosso. Feito com o que não coube numa rosa, nem num só dia — feito para durar."
   },
@@ -44,15 +44,44 @@ const CONFIG = {
     {
       momento: "O nosso primeiro encontro",
       fotos: [
-        { src: "../fotos/image.jpg", legenda: "O dia em que tudo começou." },
-        { src: "fotos/encontro2.jpg", legenda: "Ainda nervosos, mas felizes." }
+        { src: "photos/encontro1.jpg", legenda: "O dia estava lindo." },
+        { src: "photos/encontro1.jpeg", legenda: "Ainda nervosos, mas felizes." }
+      ]
+    },
+    {
+      momento: "Minahs Favoritas",
+      fotos: [
+        { src: "photos/Favorita.jpg", legenda: "Minha foto favorita sua." },
+        { src: "photos/SegundaFavorita.jpg", legenda: "Esses Olhos que me derretem 🫠" }
+      ]
+    },
+    {
+      momento: "As melhores fotos suas",
+      fotos: [
+        { src: "photos/Linda.jpg", legenda: "Minha linda no seu estilo gótica." },
+        { src: "photos/CabeloNovo.jpg", legenda: "Seu cabelo pintado, lindo." }
+      ]
+    },
+    {
+      momento: "Nossas Noites Juntas",
+      fotos: [
+        { src: "photos/primeiraNoiteJuntos.jpg", legenda: "Realmente essa noite foi engracada." },
+        { src: "photos/NoiteEmMinhaCasa.jpg", legenda: "Esse dia e essa noite foram incríveis." },
+        { src: "photos/TerceiraNoiteJuntos.jpg", legenda: "Você cheia de sono a espera da localização." }
       ]
     },
     {
       momento: "Momentos do dia a dia",
       fotos: [
-        { src: "fotos/dia1.jpg", legenda: "Um dia qualquer, mas contigo." },
-        { src: "fotos/dia2.jpg", legenda: "" }
+        { src: "photos/Beijocas.webp", legenda: "Um dia qualquer, mas contigo." },
+        { src: "photos/Really.webp", legenda: "Outro dia, outro momento contigo." }
+      ]
+    },
+    {
+      momento: "Apenas Você",  
+    fotos: [
+        { src: "photos/AftonSparv.jpg", legenda: "Você e Nosso filho haha." },
+        { src: "photos/Lurdes.jpeg", legenda: "Você em toda sua beleza ❤️ hahaha." }
       ]
     }
   ],
@@ -75,22 +104,23 @@ const CONFIG = {
 
   // ---------------- LINHA DO TEMPO ----------------
   // EDITAR AQUI
-  timeline: [
-    { data: "EDITAR — data", titulo: "Começámos a falar", descricao: "Descreve aqui como começou." },
-    { data: "EDITAR — data", titulo: "Primeiro encontro", descricao: "Descreve aqui esse dia." },
-    { data: "EDITAR — data", titulo: "Primeiro abraço", descricao: "Descreve aqui esse momento." },
-    { data: "EDITAR — data", titulo: "Primeiro beijo", descricao: "Descreve aqui esse momento." },
-    { data: "EDITAR — data", titulo: "Pedido de namoro", descricao: "Descreve aqui como pediste." },
-    { data: "EDITAR — data", titulo: "Primeiro mês", descricao: "Descreve aqui como foi." }
-  ],
+    timeline: [
+      { data: "13/05/2026", titulo: "Começámos a falar", descricao: "Você chegou e me mandou uma mensagem dizendo apenas um \"Olá, tudo bem?\"." },
+      { data: "25/05/2026", titulo: "Primeiro encontro", descricao: "Nossa, esse dia foi engraçado. Passei o dia todo a tentar pegar na sua mão." },
+      { data: "24/05/2026", titulo: "Primeiro abraço", descricao: "Esse momento foi bom, senti o seu cheiro... nossa, que bom 💕." },
+      { data: "25/05/2026", titulo: "Primeiro beijo", descricao: "Ai, meu coração haha. Foi um selinho, mas o meu estômago já estava cheio de borboletas 🫠." },
+      { data: "17/06/2026", titulo: "Pedido de namoro", descricao: "Eu simplesmente te puxei e mostrei o que eu tinha feito (sorry, mas você estava a falar e não parava haha)." },
+      { data: "18/06/2026", titulo: "Nossa primeira quase primeira vez", descricao: "Nossa, que noite. Apenas isso, Que NOITE (Reprovei no teste do dia seguinte mas valeu completamente apena 😁)."   },
+      { data: "17/07/2026", titulo: "Primeiro mês", descricao: "Esse mês foi incrível, com uma pessoa maravilhosa que fez um mês parecer muito mais. Juro, quero mais e mais." }
+    ],
 
   // ---------------- COISAS QUE ADORO ----------------
   // EDITAR AQUI
   coisas: [
     { icone: "😊", titulo: "O teu sorriso", texto: "Ilumina qualquer sala, mesmo à distância." },
-    { icone: "💇‍♀️", titulo: "O teu cabelo", texto: "Adoro quando o penteias sem pensar." },
-    { icone: "👀", titulo: "Os teus olhos", texto: "Contam sempre mais do que dizes." },
-    { icone: "💞", titulo: "O teu jeito de amar", texto: "Simples, verdadeiro, sem teatro." },
+    { icone: "💇‍♀️", titulo: "O teu cabelo", texto: "Adoro ele, solto, preso colorido, descolorido, eu ADORO seu cabelo." },
+    { icone: "👀", titulo: "Os teus olhos", texto: "Me derretem muito facil, seu olhar e viciante." },
+    { icone: "💞", titulo: "O teu jeito de amar", texto: "`1` `." },
     { icone: "🤗", titulo: "Os teus abraços", texto: "O sítio onde tudo faz sentido." },
     { icone: "🌸", titulo: "O teu cheiro", texto: "Reconheço-o de olhos fechados." },
     { icone: "😂", titulo: "A tua risada", texto: "Contagiante, alta, perfeita." },
@@ -146,7 +176,6 @@ function criarImagemComFallback(src, alt, classeExtra){
   wrapper.className = classeExtra || "";
   const img = new Image();
   img.alt = alt || "";
-  img.loading = "lazy";
   img.onerror = () => {
     wrapper.innerHTML = `<div class="foto-placeholder"><span class="coracao">❤</span><span>Adiciona a tua foto:<br>${src}</span></div>`;
   };
@@ -291,18 +320,7 @@ document.getElementById("btn-easter").addEventListener("click", () => {
   document.getElementById("modal-overlay").classList.add("active");
 });
 
-// ---------- Música (opcional) ----------
-const audio = document.getElementById("audio-fundo");
-audio.src = "musica/nossa-musica.mp3";
-let aTocar = false;
-document.getElementById("btn-musica").addEventListener("click", (e) => {
-  if(!aTocar){
-    audio.play().then(()=>{ aTocar = true; e.target.textContent = "❚❚"; })
-      .catch(()=>{ e.target.textContent = "🎵"; });
-  } else {
-    audio.pause(); aTocar = false; e.target.textContent = "♪";
-  }
-});
+
 
 // ---------- Corações flutuantes discretos ----------
 const heartsBg = document.getElementById("hearts-bg");
