@@ -120,13 +120,13 @@ const CONFIG = {
     { icone: "😊", titulo: "O teu sorriso", texto: "Ilumina qualquer sala, mesmo à distância." },
     { icone: "💇‍♀️", titulo: "O teu cabelo", texto: "Adoro ele, solto, preso colorido, descolorido, eu ADORO seu cabelo." },
     { icone: "👀", titulo: "Os teus olhos", texto: "Me derretem muito facil, seu olhar e viciante." },
-    { icone: "💞", titulo: "O teu jeito de amar", texto: "`1` `." },
-    { icone: "🤗", titulo: "Os teus abraços", texto: "O sítio onde tudo faz sentido." },
+    { icone: "💞", titulo: "O teu jeito de amar", texto: "O teu jeito de amar e adoravel, o voce me permitir chegar perto, estar grudado em ti ja diz tudo." },
+    { icone: "🤗", titulo: "Os teus abraços", texto: "O sítio onde posso apenas estar a sentir seu cheiro sentido seu corpo." },
     { icone: "🌸", titulo: "O teu cheiro", texto: "Reconheço-o de olhos fechados." },
-    { icone: "😂", titulo: "A tua risada", texto: "Contagiante, alta, perfeita." },
-    { icone: "🗣️", titulo: "As tuas gírias", texto: "\"Ai homem...\" nunca vai deixar de ser engraçado." },
-    { icone: "🤪", titulo: "O teu jeito maluco", texto: "Nunca sei o que vem a seguir." },
-    { icone: "💪", titulo: "A tua determinação", texto: "Vejo-te lutar pelo que queres, e isso inspira-me." }
+    { icone: "😂", titulo: "A tua risada", texto: "Contagiante, e incrivel hahaha" },
+    { icone: "🗣️", titulo: "A tua voz", texto: "Ainda lembro quando ouvi ela atravez do tele da jessica, nossa que voz!" },
+    { icone: "🤪", titulo: "O teu jeito maluco", texto: "Nunca sei o que vem a seguir, mas por algum motivo voce aceita tudo ou quase tudo que digo que quero fazer (Nao estou a reclamar)." },
+    { icone: "💪", titulo: "O teu corpo", texto: "Me viciou de uma forma que nem sei como explicar." }
   ],
 
   // ---------------- CARTA FINAL ----------------
