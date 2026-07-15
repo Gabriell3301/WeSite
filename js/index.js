@@ -187,9 +187,14 @@ function criarImagemComFallback(src, alt, classeExtra){
 // ---------- Home ----------
 document.getElementById("titulo-home").textContent = CONFIG.home.titulo;
 document.getElementById("mensagem-home").textContent = CONFIG.home.mensagem;
-document.getElementById("foto-capa").appendChild(
-  criarImagemComFallback(CONFIG.home.fotoCapa, "Nós", "")
-);
+const foto = document.createElement("img");
+foto.src = "photos/capa.png"; // ou o caminho correto
+foto.alt = "Nós";
+foto.style.width = "100%";
+foto.style.height = "100%";
+foto.style.objectFit = "cover";
+
+document.getElementById("foto-capa").appendChild(foto);
 
 function diasEntre(dataStr){
   const inicio = new Date(dataStr + "T00:00:00");
