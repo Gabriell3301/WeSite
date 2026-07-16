@@ -108,7 +108,7 @@ const CONFIG = {
   // ---------------- LINHA DO TEMPO ----------------
   // EDITAR AQUI
     timeline: [
-      { data: "13/05/2026", titulo: "Começámos a falar", descricao: "Você chegou e me mandou uma mensagem dizendo apenas um \"Olá, tudo bem?\"." },
+      { data: "13/05/2026", titulo: "Começámos a falar", descricao: "Você chegou e me mandou uma mensagem dizendo apenas um \"Halo tudo bem?\"." },
       { data: "25/05/2026", titulo: "Primeiro encontro", descricao: "Nossa, esse dia foi engraçado. Passei o dia todo a tentar pegar na sua mão." },
       { data: "24/05/2026", titulo: "Primeiro abraço", descricao: "Esse momento foi bom, senti o seu cheiro... nossa, que bom 💕." },
       { data: "25/05/2026", titulo: "Primeiro beijo", descricao: "Ai, meu coração haha. Foi um selinho, mas o meu estômago já estava cheio de borboletas 🫠." },
