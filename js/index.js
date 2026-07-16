@@ -24,17 +24,17 @@ const CONFIG = {
     {
       titulo: "Motivos pelos quais te amo",
       tipo: "Pensamento",
-      texto: "Amo-te pela forma como ris sem te preocupares com o volume.\nAmo-te pela paciência que tens comigo nos dias difíceis.\nAmo-te por seres exatamente quem és, sem pedir desculpa por isso.\n\n(Continua esta lista sempre que quiseres — ela nunca devia acabar.)"
+      texto: "Amo-te pela forma como ris.\nAmo-te pela paciência que tens comigo nos dias que sou implicante.\nAmo-te por seres exatamente quem és, sem pedir desculpa por isso.\nAmo-te por seres essa pessoa com gostos estranhos, mas que eu adoro\nAmo a forma como se expressas com os gestos de mao haha\nAmo a forma como aceitas minhas ideias loucas e ainda tens ideias piores haha\nAmo-te por voce ser voce exatamente como és."
     },
     {
       titulo: "Um poema pequeno",
       tipo: "Poema",
-      texto: "Não sei escrever grandes versos,\nsó sei que desde que chegaste,\nos meus dias têm outro peso —\nmais leve, mesmo quando pesas nas minhas ideias o dia todo."
+      texto: "Um mês parece pouco pra quem vê passar,\nMas basta um instante pra muita vida guardar,\nHouve risos, silêncios, conversas sem fim,\nE o mais bonito... foi vivê-los contigo e contigo em mim.\n\nHoje só quero dizer, sem nada esconder,\nQue eu te amo e escolho permanecer,\nNos dias leves, nos que custam a sorrir,\nPorque é ao teu lado que eu quero seguir."
     },
     {
-      titulo: "Carta do primeiro dia",
+      titulo: "Cartinha de Amor",
       tipo: "Carta",
-      texto: "Querida Lurdes,\n\nEstou a escrever isto sem saber bem como pôr em palavras o que sinto. Só sei que desde que começámos a falar, tudo ficou um bocadinho mais bonito.\n\nCom amor,\n" 
+      texto: "Querida Lurdes,\n\nEstou a escrever isto sem saber bem como pôr em palavras o que sinto. Só sei que desde que começámos a falar, tudo ficou um bocadinho mais bonito.\n\nCom amor, seu amor\n" 
     }
   ],
 
@@ -90,8 +90,11 @@ const CONFIG = {
   // EDITAR AQUI — mensagens específicas por semana (semana 1, 2, 3...).
   // As semanas que não estiverem aqui recebem uma mensagem genérica da lista "mensagensGenericas".
   rosasEspecificas: {
-    1: "A nossa primeira rosa. Ainda a abrir, como nós.",
-    2: "Já sei que quero regar este jardim durante muito tempo."
+    1: "A primeira rosa foi no nosso date, queria que queria te dar uma rosa.",
+    2: "Pelo que eu vi a segunda foi do pedido de namoro haha.",
+    3: "A terceira foi quando eu fui a sua casa a tarde e voce me beijou na frente da sua mae, acho eu.",
+    4: "A quarta foi no dia que fui ter com você nas festas e te levei uma rosa.",
+    5: "A quinta/sexta eu levei por ultimo que foi antes de voce ir a viagem.",
   },
   mensagensGenericas: [
     "Mais uma semana, mais uma razão para gostar de ti.",
@@ -125,13 +128,13 @@ const CONFIG = {
     { icone: "🌸", titulo: "O teu cheiro", texto: "Reconheço-o de olhos fechados." },
     { icone: "😂", titulo: "A tua risada", texto: "Contagiante, e incrivel hahaha" },
     { icone: "🗣️", titulo: "A tua voz", texto: "Ainda lembro quando ouvi ela atravez do tele da jessica, nossa que voz!" },
-    { icone: "🤪", titulo: "O teu jeito maluco", texto: "Nunca sei o que vem a seguir, mas por algum motivo voce aceita tudo ou quase tudo que digo que quero fazer (Nao estou a reclamar)." },
+    { icone: "🤪", titulo: "O teu jeitinho doido", texto: "Nunca sei o que vem a seguir, mas por algum motivo voce aceita tudo ou quase tudo que digo que quero fazer (Nao estou a reclamar)." },
     { icone: "💪", titulo: "O teu corpo", texto: "Me viciou de uma forma que nem sei como explicar." }
   ],
 
   // ---------------- CARTA FINAL ----------------
   // EDITAR AQUI
-  cartaFinal: "Lurdes,\n\nQueria dar-te uma rosa, mas não consegui entregá-la a tempo. Em vez disso, construí isto — um sítio que não murcha, que não se perde, e que pode continuar a crescer enquanto nós crescermos.\n\nCada carta, cada rosa, cada foto aqui é uma forma de te dizer a mesma coisa de maneiras diferentes: gosto de ti, e quero continuar a escrever esta história contigo, capítulo a capítulo.\n\nCom todo o carinho,",
+  cartaFinal: "Lurdes,\n\nEu disse que iria fazer algo usando a minha maior skill, então fiz-te um site, onde há um bocadinho de mim em cada clique, em cada cor, em cada palavra e em cada ideia. Espero que gostes, amor. Este é apenas o nosso primeiro mês de muitos que ainda estão por vir. Quero que saibas que, ao teu lado, sou mais feliz e que estarei sempre contigo, seja para uma chamada ou uma pilotada. Sempre que precisares de mim, eu vou estar aqui.\n\nBeijinhos e beijocas, meu amor.\n\nEu amo-te. ❤️"
 
 };
 
@@ -302,7 +305,7 @@ CONFIG.coisas.forEach(c => {
 
 // contador "ai homem"
 const valorGirias = document.getElementById("valor-girias");
-let contagemGirias = parseInt(localStorage.getItem("aiHomemCount") || "0", 10);
+let contagemGirias = parseInt(localStorage.getItem("aiHomemCount") || "998", 10);
 valorGirias.textContent = contagemGirias;
 document.getElementById("btn-girias").addEventListener("click", () => {
   contagemGirias++;
@@ -325,7 +328,18 @@ document.getElementById("btn-easter").addEventListener("click", () => {
   document.getElementById("modal-overlay").classList.add("active");
 });
 
-
+// ---------- Música (opcional) ----------
+const audio = document.getElementById("audio-fundo");
+audio.src = "music/fundo.mp3";
+let aTocar = false;
+document.getElementById("btn-musica").addEventListener("click", (e) => {
+  if(!aTocar){
+    audio.play().then(()=>{ aTocar = true; e.target.textContent = "❚❚"; })
+      .catch(()=>{ e.target.textContent = "🎵"; });
+  } else {
+    audio.pause(); aTocar = false; e.target.textContent = "♪";
+  }
+});
 
 // ---------- Corações flutuantes discretos ----------
 const heartsBg = document.getElementById("hearts-bg");
